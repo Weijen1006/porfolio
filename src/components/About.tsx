@@ -1,5 +1,5 @@
 import { Vortex } from "@/components/ui/vortex";
-import { LinkPreview } from "@/components/ui/link-preview";
+import { TechLogo } from "@/components/TechLogo";
 import {
   Carousel,
   CarouselContent,
@@ -87,46 +87,22 @@ export default function About({ baseHue }: { baseHue: number }) {
                     <CardContent className="flex flex-col justify-center h-full">
                       <div className="grid grid-cols-3 justify-center gap-6 place-items-center">
                         {/* HTML */}
-                        <LinkPreview key="html" url="https://html.spec.whatwg.org/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="html.png" alt="HTML" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://html.spec.whatwg.org/" src="html.png" alt="HTML" />
 
                         {/* CSS */}
-                        <LinkPreview key="css" url="https://www.w3.org/Style/CSS/Overview.en.html">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="css.svg" alt="CSS" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://www.w3.org/Style/CSS/Overview.en.html" src="css.svg" alt="CSS" />
 
                         {/* JavaScript */}
-                        <LinkPreview key="javascript" url="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="javascript.svg" alt="JavaScript" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://developer.mozilla.org/en-US/docs/Web/JavaScript" src="javascript.svg" alt="JavaScript" />
 
                         {/* TypeScript */}
-                        <LinkPreview key="typescript" url="https://www.typescriptlang.org/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="typescript.svg" alt="TypeScript" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://www.typescriptlang.org/" src="typescript.svg" alt="TypeScript" />
 
                         {/* React */}
-                        <LinkPreview key="react" url="https://react.dev/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="react.svg" alt="React" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://react.dev/" src="react.svg" alt="React" />
 
                         {/* Next.js */}
-                        <LinkPreview key="nextjs" url="https://nextjs.org/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img className="bg-white p-3" src="nextjs.png" alt="Next.js" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://nextjs.org/" src="nextjs.png" alt="Next.js" />
                       </div>
                     </CardContent>
                   </Card>
@@ -141,74 +117,34 @@ export default function About({ baseHue }: { baseHue: number }) {
                     <CardContent className="flex flex-col justify-center h-full">
                       <div className="grid grid-cols-4 justify-center gap-6 place-items-center">
                         {/* Python */}
-                        <LinkPreview key="python" url="https://www.python.org/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="python.svg" alt="Python" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://www.python.org/" src="python.svg" alt="Python" />
 
                         {/* FastAPI */}
-                        <LinkPreview key="fastapi" url="https://fastapi.tiangolo.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="fastapi.png" alt="FastAPI" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://fastapi.tiangolo.com/" src="fastapi.png" alt="FastAPI" />
 
                         {/* Flask */}
-                        <LinkPreview key="flask" url="https://flask.palletsprojects.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="flask.svg" alt="Flask" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://flask.palletsprojects.com/" src="flask.svg" alt="Flask" />
 
                         {/* Node.js */}
-                        <LinkPreview key="nodejs" url="https://nodejs.org/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="nodejs.svg" alt="Node.js" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://nodejs.org/" src="nodejs.svg" alt="Node.js" />
 
                         {/* Nest.js */}
-                        <LinkPreview key="nestjs" url="https://nestjs.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="nestjs.svg" alt="Nest.js" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://nestjs.com/" src="nestjs.svg" alt="Nest.js" />
 
                         {/* Redis */}
-                        <LinkPreview key="redis" url="https://redis.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="redis.svg" alt="Redis" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://redis.com/" src="redis.svg" alt="Redis" />
 
                         {/* SQL Database */}
-                        <LinkPreview key="mysql" url="https://www.mysql.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="mysql.svg" alt="MySQL" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://www.mysql.com/" src="mysql.svg" alt="MySQL" />
 
                         {/* Bash */}
-                        <LinkPreview key="bash" url="https://www.shellscript.sh/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="bash.png" alt="Bash" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://www.shellscript.sh/" src="bash.png" alt="Bash" />
 
                         {/* PowerShell */}
-                        <LinkPreview key="powershell" url="https://learn.microsoft.com/en-us/powershell/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="powershell.png" alt="PowerShell" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://learn.microsoft.com/en-us/powershell/" src="powershell.png" alt="PowerShell" />
 
                         { /* Huggingface */}
-                        <LinkPreview key="huggingface" url="https://huggingface.co/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="huggingface.svg" alt="Huggingface" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://huggingface.co/" src="huggingface.svg" alt="Huggingface" />
                       </div>
                     </CardContent>
                   </Card>
@@ -223,39 +159,19 @@ export default function About({ baseHue }: { baseHue: number }) {
                     <CardContent className="flex flex-col justify-center h-full">
                       <div className="grid grid-cols-3 justify-center gap-6 place-items-center">
                         {/* Jest */}
-                        <LinkPreview key="jest" url="https://jestjs.io/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="jest.svg" alt="Jest" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://jestjs.io/" src="jest.svg" alt="Jest" />
 
                         {/* Pytest */}
-                        <LinkPreview key="pytest" url="https://docs.pytest.org/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="pytest.png" alt="Pytest" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://docs.pytest.org/" src="pytest.png" alt="Pytest" />
 
                         {/* Cypress */}
-                        <LinkPreview key="cypress" url="https://www.cypress.io/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="cypress.svg" alt="Cypress" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://www.cypress.io/" src="cypress.svg" alt="Cypress" />
 
                         {/* Playwright */}
-                        <LinkPreview key="playwright" url="https://playwright.dev/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="playwright.svg" alt="Playwright" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://playwright.dev/" src="playwright.svg" alt="Playwright" />
 
                         {/* Postman */}
-                        <LinkPreview key="postman" url="https://www.postman.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="postman.svg" alt="Postman" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://www.postman.com/" src="postman.svg" alt="Postman" />
                       </div>
                     </CardContent>
                   </Card>
@@ -270,24 +186,13 @@ export default function About({ baseHue }: { baseHue: number }) {
                     <CardContent className="flex flex-col justify-center h-full">
                       <div className="grid grid-cols-3 justify-center gap-6 place-items-center">
                         {/* Docker */}
-                        <LinkPreview key="docker" url="https://www.docker.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="docker.svg" alt="Docker" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://www.docker.com/" src="docker.svg" alt="Docker" />
 
                         {/* Kubernetes */}
-                        <LinkPreview key="kubernetes" url="https://kubernetes.io/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="kubernetes.png" alt="Kubernetes" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://kubernetes.io/" src="kubernetes.png" alt="Kubernetes" />
+
                         {/* VMWare Tanzu */}
-                        <LinkPreview key="tanzu" url="https://tanzu.vmware.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="tanzu.png" alt="VMWare Tanzu" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://tanzu.vmware.com/" src="tanzu.png" alt="VMWare Tanzu" />
                       </div>
                     </CardContent>
                   </Card>
@@ -302,46 +207,22 @@ export default function About({ baseHue }: { baseHue: number }) {
                     <CardContent className="flex flex-col justify-center h-full">
                       <div className="grid grid-cols-3 justify-center gap-6 place-items-center">
                         {/* Git */}
-                        <LinkPreview key="git" url="https://git-scm.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="git.svg" alt="Git" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://git-scm.com/" src="git.svg" alt="Git" />
 
                         {/* Gitlab */}
-                        <LinkPreview key="gitlab" url="https://about.gitlab.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="gitlab.svg" alt="Gitlab" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://about.gitlab.com/" src="gitlab.svg" alt="Gitlab" />
 
                         {/* ServiceNow */}
-                        <LinkPreview key="servicenow" url="https://www.servicenow.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="servicenow.png" alt="ServiceNow" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://www.servicenow.com/" src="servicenow.png" alt="ServiceNow" />
 
                         {/* Jira */}
-                        <LinkPreview key="jira" url="https://www.atlassian.com/software/jira">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="jira.png" alt="Jira" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://www.atlassian.com/software/jira" src="jira.png" alt="Jira" />
 
                         {/* Miro */}
-                        <LinkPreview key="miro" url="https://miro.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="miro.svg" alt="Miro" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://miro.com/" src="miro.svg" alt="Miro" />
 
                         {/* Figma */}
-                        <LinkPreview key="figma" url="https://www.figma.com/">
-                          <div className="flex items-center justify-center rounded-full bg-white/5 w-24 h-24">
-                            <img src="figma.svg" alt="Figma" width={80} height={80} />
-                          </div>
-                        </LinkPreview>
+                        <TechLogo url="https://www.figma.com/" src="figma.svg" alt="Figma" />
                       </div>
                     </CardContent>
                   </Card>
