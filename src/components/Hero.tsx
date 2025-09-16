@@ -24,13 +24,13 @@ export default function Hero({ baseHue }: { baseHue: number }) {
             <div >
               <TextGenerateEffect
                 className="text-white text-2xl md:text-6xl text-center" // <-- text-left
-                duration={1.5}
+                duration={1}
                 words={"Hello! My name is"}
               />
               <TextGenerateEffect
                 className="text-white text-2xl md:text-6xl text-center"
-                duration={1.5}
-                delay={1.5}
+                duration={1}
+                delay={1}
                 words={[
                   <LinkPreview
                     key="weijen"
@@ -46,8 +46,8 @@ export default function Hero({ baseHue }: { baseHue: number }) {
               />
               <TextGenerateEffect
                 className="text-white text-2xl md:text-6xl text-center"
-                duration={1.5}
-                delay={2.5}
+                duration={1}
+                delay={2}
                 words={"I'm a Software Engineer"}
               />
             </div>

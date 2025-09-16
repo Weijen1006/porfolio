@@ -17,12 +17,12 @@ export function useScrollRouter(sections: string[], scrollThreshold: number) {
       const top = index * window.innerHeight;
 
       isScrollingRef.current = true; // lock observer while scrolling
-      window.scrollTo({ top, behavior: "smooth" });
+      window.scrollTo({ top });
 
       // unlock after animation (~600ms is safe for smooth scroll)
       const timeout = setTimeout(() => {
         isScrollingRef.current = false;
-      }, 700);
+      }, 0);
 
       return () => clearTimeout(timeout);
     }
@@ -44,7 +44,7 @@ export function useScrollRouter(sections: string[], scrollThreshold: number) {
             if (location.pathname !== newPath) {
               navigate(newPath, { replace: true });
             }
-          }, 150); // ⏳ wait 150ms before updating
+          }, 0); // ⏳ wait 10ms before updating
         }
       },
       { threshold: scrollThreshold }
