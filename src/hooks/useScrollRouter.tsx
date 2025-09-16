@@ -5,6 +5,7 @@ export function useScrollRouter(sections: string[], scrollThreshold: number) {
   const location = useLocation();
   const navigate = useNavigate();
   const isScrollingRef = useRef(false); // 🔒 scroll lock
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null); // ⏳ debounce timer
 
   // Scroll when user navigates via navbar
   useEffect(() => {
@@ -35,11 +36,15 @@ export function useScrollRouter(sections: string[], scrollThreshold: number) {
 
         const visible = entries.find((entry) => entry.isIntersecting);
         if (visible) {
-          const id = visible.target.id;
-          const newPath = id === "hero" ? "/" : `/${id}`;
-          if (location.pathname !== newPath) {
-            navigate(newPath, { replace: true });
-          }
+          if (debounceRef.current) clearTimeout(debounceRef.current);
+
+          debounceRef.current = setTimeout(() => {
+            const id = visible.target.id;
+            const newPath = id === "hero" ? "/" : `/${id}`;
+            if (location.pathname !== newPath) {
+              navigate(newPath, { replace: true });
+            }
+          }, 150); // ⏳ wait 150ms before updating
         }
       },
       { threshold: scrollThreshold }
@@ -50,6 +55,9 @@ export function useScrollRouter(sections: string[], scrollThreshold: number) {
       if (el) observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    return () => {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+      observer.disconnect();
+    };
   }, [sections, navigate, location, scrollThreshold]);
 }
