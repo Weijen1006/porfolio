@@ -13,7 +13,7 @@ export default function LandingPage() {
         <section id="about" className="h-screen">
           <About baseHue={animationBaseHue}/>
         </section>
-        <section id="projects" className="h-screen">
+        <section id="project" className="h-screen">
           <Project baseHue={animationBaseHue} />
         </section>
         <section id="contact" className="h-screen">
