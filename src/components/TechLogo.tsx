@@ -11,12 +11,12 @@ export const TechLogo = ({
     url,
     src,
     alt,
-    size = { sm: "w-16 h-16", md: "w-20 h-20", lg: "w-24 h-24" },
 }: TechLogoProps) => {
     return (
-        <LinkPreview key={alt} url={url}>
+        <LinkPreview key={alt} url={url} className="rounded-full">
             <div
-                className={`flex items-center justify-center rounded-full bg-white/5 w-12 h-12 ${size.sm} ${size.md} ${size.lg}`}
+                className={`flex items-center justify-center rounded-full bg-white/5 w-[12vw] aspect-square min-w-[48px] max-w-[96px] transition-all duration-300 ease-in-out
+                    hover:scale-105 hover:bg-white/30`}
             >
                 <img src={src} alt={alt} className="w-4/5 h-4/5 object-contain" />
             </div>

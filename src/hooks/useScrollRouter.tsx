@@ -19,7 +19,7 @@ export function useScrollRouter(sections: string[], scrollThreshold: number) {
       isScrollingRef.current = true; // lock observer while scrolling
       window.scrollTo({ top });
 
-      // unlock after animation (~600ms is safe for smooth scroll)
+      // unlock after animation
       const timeout = setTimeout(() => {
         isScrollingRef.current = false;
       }, 0);
@@ -44,7 +44,7 @@ export function useScrollRouter(sections: string[], scrollThreshold: number) {
             if (location.pathname !== newPath) {
               navigate(newPath, { replace: true });
             }
-          }, 0); // ⏳ wait 10ms before updating
+          }, 0); // ⏳ wait 0ms before updating
         }
       },
       { threshold: scrollThreshold }

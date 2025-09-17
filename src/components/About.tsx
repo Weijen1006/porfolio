@@ -4,6 +4,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselDots,
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
@@ -43,18 +44,18 @@ export default function About({ baseHue }: { baseHue: number }) {
             transition={{ duration: 1, ease: "easeOut" }}
             className="w-full max-w-5xl"
           >
-            <Carousel className="w-full max-w-5xl" >
+            <Carousel className="w-full max-w-[80vw] mx-auto" >
               <CarouselContent>
                 {/* Intro */}
                 <CarouselItem>
-                  <Card className="h-[60vh] flex flex-col p-10 shadow-2xl">
+                  <Card className="h-[60vh] flex flex-col p-10 shadow-2xl gap-4 overflow-x-auto scroll-smooth">
                     <CardHeader>
-                      <CardTitle className="text-3xl font-bold text-center">
+                      <CardTitle className="text-[clamp(1rem,6vw,3rem)] font-bold text-center">
                         About Me
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="flex flex-col justify-center h-full">
-                      <ul className="list-disc list-inside space-y-3 text-lg md:text-xl text-start">
+                    <CardContent className="flex flex-col justify-center flex-1">
+                      <ul className="list-disc list-inside space-y-3 text-[clamp(0.875rem,4vw,1.25rem)] text-start">
                         <li>
                           Software engineer with <span className="font-semibold text-[hsl(var(--base-hue),100%,50%)]">{experienceYears} years of
                             experience</span> in full-stack web development, automation scripting,
@@ -80,11 +81,11 @@ export default function About({ baseHue }: { baseHue: number }) {
 
                 {/* Frontend */}
                 <CarouselItem>
-                  <Card className="h-[60vh] flex flex-col p-10 shadow-2xl">
+                  <Card className="h-[60vh] flex flex-col p-10 shadow-2xl gap-4 overflow-x-auto scroll-smooth">
                     <CardHeader>
-                      <CardTitle className="text-3xl font-bold text-center">Frontend</CardTitle>
+                      <CardTitle className="text-[clamp(1rem,6vw,3rem)] font-bold text-center">Frontend</CardTitle>
                     </CardHeader>
-                    <CardContent className="flex flex-col justify-center h-full">
+                    <CardContent className="flex flex-col justify-center flex-1">
                       <div className="grid grid-cols-3 justify-center gap-6 place-items-center">
                         {/* HTML */}
                         <TechLogo url="https://html.spec.whatwg.org/" src="html.png" alt="HTML" />
@@ -110,11 +111,11 @@ export default function About({ baseHue }: { baseHue: number }) {
 
                 {/* Backend */}
                 <CarouselItem>
-                  <Card className="h-[60vh] flex flex-col p-10 shadow-2xl">
+                  <Card className="h-[60vh] flex flex-col p-10 shadow-2xl gap-4 overflow-x-auto scroll-smooth">
                     <CardHeader>
-                      <CardTitle className="text-3xl font-bold text-center">Backend/Scripting</CardTitle>
+                      <CardTitle className="text-[clamp(1rem,6vw,3rem)] font-bold text-center">Backend/Scripting</CardTitle>
                     </CardHeader>
-                    <CardContent className="flex flex-col justify-center h-full">
+                    <CardContent className="flex flex-col justify-center flex-1">
                       <div className="grid grid-cols-4 justify-center gap-6 place-items-center">
                         {/* Python */}
                         <TechLogo url="https://www.python.org/" src="python.svg" alt="Python" />
@@ -152,11 +153,11 @@ export default function About({ baseHue }: { baseHue: number }) {
 
                 {/* Testing */}
                 <CarouselItem>
-                  <Card className="h-[60vh] flex flex-col p-10 shadow-2xl">
+                  <Card className="h-[60vh] flex flex-col p-10 shadow-2xl gap-4 overflow-x-auto scroll-smooth">
                     <CardHeader>
-                      <CardTitle className="text-3xl font-bold text-center">Testing</CardTitle>
+                      <CardTitle className="text-[clamp(1rem,6vw,3rem)] font-bold text-center">Testing</CardTitle>
                     </CardHeader>
-                    <CardContent className="flex flex-col justify-center h-full">
+                    <CardContent className="flex flex-col justify-center flex-1">
                       <div className="grid grid-cols-3 justify-center gap-6 place-items-center">
                         {/* Jest */}
                         <TechLogo url="https://jestjs.io/" src="jest.svg" alt="Jest" />
@@ -179,11 +180,11 @@ export default function About({ baseHue }: { baseHue: number }) {
 
                 {/* Deployment */}
                 <CarouselItem>
-                  <Card className="h-[60vh] flex flex-col p-10 shadow-2xl">
+                  <Card className="h-[60vh] flex flex-col p-10 shadow-2xl gap-4 overflow-x-auto scroll-smooth">
                     <CardHeader>
-                      <CardTitle className="text-3xl font-bold text-center">Deployment</CardTitle>
+                      <CardTitle className="text-[clamp(1rem,6vw,3rem)] font-bold text-center">Deployment</CardTitle>
                     </CardHeader>
-                    <CardContent className="flex flex-col justify-center h-full">
+                    <CardContent className="flex flex-col justify-center flex-1">
                       <div className="grid grid-cols-3 justify-center gap-6 place-items-center">
                         {/* Docker */}
                         <TechLogo url="https://www.docker.com/" src="docker.svg" alt="Docker" />
@@ -200,11 +201,11 @@ export default function About({ baseHue }: { baseHue: number }) {
 
                 {/* Extras */}
                 <CarouselItem>
-                  <Card className="h-[60vh] flex flex-col p-10 shadow-2xl">
+                  <Card className="h-[60vh] flex flex-col p-10 shadow-2xl gap-4 overflow-x-auto scroll-smooth">
                     <CardHeader>
-                      <CardTitle className="text-3xl font-bold text-center">Extras</CardTitle>
+                      <CardTitle className="text-[clamp(1rem,6vw,3rem)] font-bold text-center">Extras</CardTitle>
                     </CardHeader>
-                    <CardContent className="flex flex-col justify-center h-full">
+                    <CardContent className="flex flex-col justify-center flex-1">
                       <div className="grid grid-cols-3 justify-center gap-6 place-items-center">
                         {/* Git */}
                         <TechLogo url="https://git-scm.com/" src="git.svg" alt="Git" />
@@ -230,6 +231,7 @@ export default function About({ baseHue }: { baseHue: number }) {
               </CarouselContent>
 
               {/* Carousel Controls */}
+              <CarouselDots />
               <CarouselPrevious />
               <CarouselNext />
             </Carousel>
