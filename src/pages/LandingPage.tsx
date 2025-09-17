@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Project from "@/components/Project";
 import Contact from "@/components/Contact";
 
 export default function LandingPage() {
@@ -12,9 +13,9 @@ export default function LandingPage() {
         <section id="about" className="h-screen">
           <About baseHue={animationBaseHue}/>
         </section>
-        {/* <section id="projects" className="snap-center h-screen">
-          <Projects />
-        </section> */}
+        <section id="projects" className="h-screen">
+          <Project baseHue={animationBaseHue} />
+        </section>
         <section id="contact" className="h-screen">
           <Contact baseHue={animationBaseHue} />
         </section>
